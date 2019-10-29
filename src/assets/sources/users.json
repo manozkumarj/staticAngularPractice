@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Manoj Kumar",
+    "email": "manoj@gmail.com",
+    "username": "manoz",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "name": "Mahesh Kumar",
+    "email": "mahesh@gmail.com",
+    "username": "mahesh",
+    "role": "user"
+  },
+  {
+    "id": 3,
+    "name": "Anvesh Ketttepalle",
+    "email": "anvesh@gmail.com",
+    "username": "anvesh",
+    "role": "admin"
+  },
+  {
+    "id": 4,
+    "name": "Vinayak",
+    "email": "vinayak@gmail.com",
+    "username": "vinayak",
+    "role": "user"
+  },
+  {
+    "id": 5,
+    "name": "Hareesh",
+    "email": "hareesh@gmail.com",
+    "username": "hareesh",
+    "role": "user"
+  }
+]

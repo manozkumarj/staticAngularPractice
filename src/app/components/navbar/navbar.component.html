@@ -1,0 +1,46 @@
+<div
+  class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+>
+  <h4 class="my-0 mr-md-auto font-weight-normal">
+    <a
+      routerLink="/home"
+      [class.siteName]="addSiteCalss"
+      [style.color]="applyColor ? 'red' : 'blue'"
+    >
+      Company Name
+    </a>
+  </h4>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" routerLinkActive="activated" routerLink="/home"
+      >Home</a
+    >
+    <a
+      class="p-2 text-dark"
+      routerLinkActive="activated"
+      routerLink="/json-users"
+      >Json Users</a
+    >
+    <a
+      class="p-2 text-dark"
+      routerLinkActive="activated"
+      routerLink="/jph-users"
+      >JPH Users</a
+    >
+    <a class="p-2 text-dark" routerLinkActive="activated" routerLink="/posts"
+      >Posts</a
+    >
+    <a
+      class="p-2 text-dark"
+      routerLinkActive="activated"
+      routerLink="/github-followers"
+      >Github Follwers</a
+    >
+    <a
+      class="p-2 text-dark"
+      routerLinkActive="activated"
+      routerLink="/local-users"
+      >Local Users</a
+    >
+  </nav>
+  <!-- <a class="btn btn-outline-primary" routerLink="#">Sign up</a> -->
+</div>

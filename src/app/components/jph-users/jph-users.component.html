@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jphuser of jphUsersList">
+      <td>{{ jphuser.id }}</td>
+      <td>{{ jphuser.name }}</td>
+      <td>{{ jphuser.username }}</td>
+      <td>{{ jphuser.email }}</td>
+      <td>{{ jphuser.phone }}</td>
+      <td>{{ jphuser.website }}</td>
+    </tr>
+  </tbody>
+</table>

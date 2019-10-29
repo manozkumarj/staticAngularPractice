@@ -1,0 +1,14 @@
+<div class="container">
+  <div
+    *ngFor="let post of allPostsList"
+    class="card"
+    style="width:100%; margin-bottom: 10px;"
+  >
+    <div class="card-body">
+      <h4 class="card-title text-primary">{{ post.title | titlecase }}</h4>
+      <p class="card-text">
+        {{ post.body }}
+      </p>
+    </div>
+  </div>
+</div>

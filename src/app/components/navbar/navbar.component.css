@@ -1,0 +1,15 @@
+.siteName {
+  font-weight: bold;
+  text-decoration: none;
+}
+.activated {
+  background: blue;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+.activated:hover,
+.activated:active,
+.activated:visited {
+  color: #fff !important;
+}

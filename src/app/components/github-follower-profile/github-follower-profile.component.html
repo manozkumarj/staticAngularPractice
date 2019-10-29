@@ -1,0 +1,21 @@
+<p>
+  Showing <b>{{ usernameParam | titlecase }}'s</b> profile...!
+</p>
+<div *ngIf="profileData">
+  <div class="container">
+    <div class="card" style="width:400px">
+      <img
+        class="card-img-top"
+        src="{{ profileData.avatar_url }}"
+        alt="Card image"
+        style="width:100%"
+      />
+      <div class="card-body">
+        <h4 class="card-title">
+          #{{ profileData.id }} - {{ profileData.login | titlecase }}
+        </h4>
+        <p class="card-text">{{ profileData.node_id }}</p>
+      </div>
+    </div>
+  </div>
+</div>

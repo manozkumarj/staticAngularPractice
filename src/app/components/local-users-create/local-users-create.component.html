@@ -1,0 +1,253 @@
+<form [formGroup]="createUser">
+  <div formGroupName="personalData">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter full Name"
+        formControlName="name"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.name').hasError('required') &&
+        createUser.get('personalData.name').touched
+      "
+    >
+      Full name is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.name').hasError('pattern') &&
+        createUser.get('personalData.name').touched
+      "
+    >
+      Please Enter Valid Full name.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Father name"
+        formControlName="fatherName"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.fatherName').hasError('required') &&
+        createUser.get('personalData.fatherName').touched
+      "
+    >
+      Father name is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.fatherName').hasError('pattern') &&
+        createUser.get('personalData.fatherName').touched
+      "
+    >
+      Please Enter Valid Father name.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Mother name"
+        formControlName="motherName"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.motherName').hasError('required') &&
+        createUser.get('personalData.motherName').touched
+      "
+    >
+      Mother name is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.motherName').hasError('pattern') &&
+        createUser.get('personalData.motherName').touched
+      "
+    >
+      Please Enter Valid Mother name.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter email"
+        formControlName="email"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.email').hasError('required') &&
+        createUser.get('personalData.email').touched
+      "
+    >
+      Email is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.email').hasError('pattern') &&
+        createUser.get('personalData.email').touched
+      "
+    >
+      Please Enter Valid Email.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter mobile"
+        formControlName="mobile"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.mobile').hasError('required') &&
+        createUser.get('personalData.mobile').touched
+      "
+    >
+      Mobile number is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.mobile').hasError('pattern') &&
+        createUser.get('personalData.mobile').touched
+      "
+    >
+      Please Enter Valid Mobile number.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter gender"
+        formControlName="gender"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.gender').hasError('required') &&
+        createUser.get('personalData.gender').touched
+      "
+    >
+      Gender is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.gender').hasError('pattern') &&
+        createUser.get('personalData.gender').touched
+      "
+    >
+      Please Enter Valid Gender.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Favourite Digit"
+        formControlName="favDigit"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.favDigit').hasError('required') &&
+        createUser.get('personalData.favDigit').touched
+      "
+    >
+      Favourite Digit is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.favDigit').hasError('pattern') &&
+        createUser.get('personalData.favDigit').touched
+      "
+    >
+      Please Enter Valid Favourite Digit.
+    </p>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter weight"
+        formControlName="weight"
+      />
+    </div>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.weight').hasError('required') &&
+        createUser.get('personalData.weight').touched
+      "
+    >
+      weight is required
+    </p>
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        createUser.get('personalData.weight').hasError('max') &&
+        createUser.get('personalData.weight').touched
+      "
+    >
+      Please Enter Valid weight.
+    </p>
+  </div>
+
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter otherInfo"
+      formControlName="otherInfo"
+    />
+  </div>
+  <p
+    class="alert alert-danger"
+    *ngIf="
+      createUser.get('otherInfo').hasError('required') &&
+      createUser.get('otherInfo').touched
+    "
+  >
+    Other Info is required.
+  </p>
+  <p
+    class="alert alert-danger"
+    *ngIf="
+      createUser.get('otherInfo').hasError('pattern') &&
+      createUser.get('otherInfo').touched
+    "
+  >
+    Please Enter Valid otherInfo.
+  </p>
+
+  <button class="btn btn-primary" type="submit" [disabled]="!createUser.valid">
+    Submit
+  </button>
+</form>
+
+<p>Form value: {{ createUser.value | json }}</p>
+<p>Form Status: {{ createUser.status | json }}</p>

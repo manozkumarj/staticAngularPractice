@@ -1,0 +1,42 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Node ID</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let githubFollower of githubFollowersList">
+      <td>{{ githubFollower.id }}</td>
+      <td>
+        <a href="#"
+          ><img
+            src="{{ githubFollower.avatar_url }}"
+            class="avatar"
+            alt="Avatar"
+            style="width: 50px"
+          />
+        </a>
+      </td>
+      <td>{{ githubFollower.login }}</td>
+      <td>{{ githubFollower.node_id }}</td>
+      <td>
+        <span class="status text-success">•</span> {{ githubFollower.type }}
+      </td>
+      <td>
+        <a
+          routerLink="/github-follower-profile/{{ githubFollower.login }}"
+          class="settings"
+          title=""
+          data-toggle="tooltip"
+          data-original-title="Settings"
+          ><i class="material-icons">View Profile</i></a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
