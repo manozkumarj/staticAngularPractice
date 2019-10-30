@@ -1,248 +1,212 @@
 <form [formGroup]="createUser">
+  <!-- personalData GROUP starts -->
   <div formGroupName="personalData">
+    <!-- Full name starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter full Name"
-        formControlName="name"
-      />
+      <input type="text" class="form-control" placeholder="Enter full Name" formControlName="name" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.name').hasError('required') &&
         createUser.get('personalData.name').touched
-      "
-    >
+      ">
       Full name is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.name').hasError('pattern') &&
         createUser.get('personalData.name').touched
-      "
-    >
-      Please Enter Valid Full name.
+      ">
+      Full name should contain first name & last name, only alphabet & space are allowed.
+      Length is Min 3 & Max 12 each excluding space.
     </p>
+    <!-- Full name ends -->
 
+    <!-- Father name starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter Father name"
-        formControlName="fatherName"
-      />
+      <input type="text" class="form-control" placeholder="Enter Father name" formControlName="fatherName" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.fatherName').hasError('required') &&
         createUser.get('personalData.fatherName').touched
-      "
-    >
+      ">
       Father name is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.fatherName').hasError('pattern') &&
         createUser.get('personalData.fatherName').touched
-      "
-    >
-      Please Enter Valid Father name.
+      ">
+      Father name should contain only alphabet & space is optional. Length is Min 3 & Max 12 including space.
     </p>
+    <!-- Father name ends -->
 
+    <!-- Mother name starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter Mother name"
-        formControlName="motherName"
-      />
+      <input type="text" class="form-control" placeholder="Enter Mother name" formControlName="motherName" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.motherName').hasError('required') &&
         createUser.get('personalData.motherName').touched
-      "
-    >
-      Mother name is required
+      ">
+      Mother name is required.
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.motherName').hasError('pattern') &&
         createUser.get('personalData.motherName').touched
-      "
-    >
-      Please Enter Valid Mother name.
+      ">
+      Mother name should contain only alphabet. Length is Min 3 & Max 12 each.
     </p>
+    <!-- Mother name ends -->
 
+    <!-- Email starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter email"
-        formControlName="email"
-      />
+      <input type="text" class="form-control" placeholder="Enter email" formControlName="email" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.email').hasError('required') &&
         createUser.get('personalData.email').touched
-      "
-    >
+      ">
       Email is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.email').hasError('pattern') &&
         createUser.get('personalData.email').touched
-      "
-    >
-      Please Enter Valid Email.
+      ">
+      Email can contain alphabet, hyphen and digits. All kinda email types are allowed.
     </p>
+    <!-- Email ends -->
 
+    <!-- Password starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter mobile"
-        formControlName="mobile"
-      />
+      <input type="text" class="form-control" placeholder="Enter Password" formControlName="password" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
+          createUser.get('personalData.password').hasError('required') &&
+          createUser.get('personalData.password').touched
+        ">
+      Password is required
+    </p>
+    <p class="alert alert-danger" *ngIf="
+          createUser.get('personalData.password').hasError('pattern') &&
+          createUser.get('personalData.password').touched
+        ">
+      Password should be like universal. Min 8 & Max 15.
+    </p>
+    <!-- Password ends -->
+
+    <!-- Mobile number starts -->
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter mobile" formControlName="mobile" />
+    </div>
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.mobile').hasError('required') &&
         createUser.get('personalData.mobile').touched
-      "
-    >
+      ">
       Mobile number is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.mobile').hasError('pattern') &&
         createUser.get('personalData.mobile').touched
-      "
-    >
-      Please Enter Valid Mobile number.
+      ">
+      Mobile number should start with 6-9 & length will be 10 digits.
     </p>
+    <!-- Mobile number ends -->
 
+    <!-- Gender starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter gender"
-        formControlName="gender"
-      />
+      <!-- <input type="text" class="form-control" placeholder="Enter gender" formControlName="gender" /> -->
+      <!-- <label>
+        <input type="radio" value="Male" formControlName="gender">
+        <span> Male</span>
+      </label>
+      <label>
+        <input type="radio" value="Female" formControlName="gender">
+        <span> Female</span>
+      </label> -->
+
+      <div class="form-check">
+        <label class="form-check-label" for="radio1">
+          <input type="radio" class="form-check-input" formControlName="gender" id="radio1" name="gender" value="Male">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="radio2">
+          <input type="radio" class="form-check-input" formControlName="gender" id="radio2" name="gender"
+            value="Female"> Female
+        </label>
+      </div>
+
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.gender').hasError('required') &&
-        createUser.get('personalData.gender').touched
-      "
-    >
+        createUser.get('personalData.favDigit').touched
+      ">
       Gender is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
-        createUser.get('personalData.gender').hasError('pattern') &&
-        createUser.get('personalData.gender').touched
-      "
-    >
-      Please Enter Valid Gender.
-    </p>
+    <!-- Gender ends -->
 
+    <!-- Favourite Digit starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter Favourite Digit"
-        formControlName="favDigit"
-      />
+      <input type="text" class="form-control" placeholder="Enter Favourite Digit" formControlName="favDigit" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.favDigit').hasError('required') &&
         createUser.get('personalData.favDigit').touched
-      "
-    >
+      ">
       Favourite Digit is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.favDigit').hasError('pattern') &&
         createUser.get('personalData.favDigit').touched
-      "
-    >
-      Please Enter Valid Favourite Digit.
+      ">
+      Accepts only one digit between 0-9.
     </p>
+    <!-- Favourite Digit ends -->
 
+    <!-- weight starts -->
     <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter weight"
-        formControlName="weight"
-      />
+      <input type="text" class="form-control" placeholder="Enter weight" formControlName="weight" />
     </div>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.weight').hasError('required') &&
         createUser.get('personalData.weight').touched
-      "
-    >
+      ">
       weight is required
     </p>
-    <p
-      class="alert alert-danger"
-      *ngIf="
+    <p class="alert alert-danger" *ngIf="
+        createUser.get('personalData.weight').hasError('pattern') &&
+        createUser.get('personalData.weight').touched
+      ">
+      Weight allows only digits, Min is 1 & should not start with 0.
+    </p>
+    <p class="alert alert-danger" *ngIf="
         createUser.get('personalData.weight').hasError('max') &&
         createUser.get('personalData.weight').touched
-      "
-    >
-      Please Enter Valid weight.
+      ">
+      Weight allows only digits, Max should be 130.
     </p>
+    <!-- weight ends -->
   </div>
+  <!-- personalData GROUP ends -->
 
+  <!-- otherInfo starts -->
   <div class="form-group">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Enter otherInfo"
-      formControlName="otherInfo"
-    />
+    <input type="text" class="form-control" placeholder="Enter otherInfo" formControlName="otherInfo" />
   </div>
-  <p
-    class="alert alert-danger"
-    *ngIf="
+  <p class="alert alert-danger" *ngIf="
       createUser.get('otherInfo').hasError('required') &&
       createUser.get('otherInfo').touched
-    "
-  >
+    ">
     Other Info is required.
   </p>
-  <p
-    class="alert alert-danger"
-    *ngIf="
-      createUser.get('otherInfo').hasError('pattern') &&
-      createUser.get('otherInfo').touched
-    "
-  >
-    Please Enter Valid otherInfo.
+  <p class="alert alert-danger" *ngIf="(
+      createUser.get('otherInfo').hasError('minlength') &&
+      createUser.get('otherInfo').touched) || (
+        createUser.get('otherInfo').hasError('maxlength') &&
+        createUser.get('otherInfo').touched)
+    ">
+    OtherInfo allows all chars with length min 3 & max 100.
   </p>
+  <!-- otherInfo ends -->
 
   <button class="btn btn-primary" type="submit" [disabled]="!createUser.valid">
     Submit
